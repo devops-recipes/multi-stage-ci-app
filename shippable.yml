@@ -36,7 +36,7 @@ build:
         $MOD_LOC/mocha "$TESTS_LOC_DIR/name.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
       else
         echo "running the core test suite for a commit"
-        $MOD_LOC/mocha --recursive "$TESTS_LOC_DIR/name.spec.js $TESTS_LOC_DIR/users.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
+        $MOD_LOC/mocha "$TESTS_LOC_DIR/name.spec.js $TESTS_LOC_DIR/users.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
       fi
     - $MOD_LOC/istanbul --include-all-sources cover -root "$SHIPPABLE_REPO_DIR/routes" $SHIPPABLE_REPO_DIR/node_modules/mocha/bin/_mocha -- -R spec-xunit-file --recursive "$TESTS_LOC_DIR/**/*.spec.js"
     - $MOD_LOC/istanbul report cobertura --dir $CODE_COVERAGE_DIR
