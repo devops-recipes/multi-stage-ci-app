@@ -29,7 +29,7 @@ build:
       if [ "$JOB_TRIGGERED_BY_NAME" == "nightly_trigger" ]
       then
         echo "running the full test suite for the nightly build"
-        $MOD_LOC/mocha --recursive "$TESTS_LOC_DIR/**/*.spec.js" -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
+        $MOD_LOC/mocha *.js -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
       elif [ "$IS_PULL_REQUEST" == true ]
       then
         echo "running the test suite for a PR build"
