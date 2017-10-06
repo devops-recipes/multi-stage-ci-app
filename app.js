@@ -34,12 +34,13 @@ app.use('/users', users);
 app.use('/name', name);
 app.use('/properties', properties);
 
+console.log('Test');
+
 // catch 404 and forward to error handler
 app.use(
   function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
-    console.log('error found');
     next(err);
   }
 );
