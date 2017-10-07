@@ -35,7 +35,7 @@ build:
         echo "running the test suite for a PR build"
         $MOD_LOC/mocha name.spec.js -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
       else
-        echo "running the core test suite for a commit"
+        echo "running the core test suite for a commit or manually triggered build"
         $MOD_LOC/mocha name.spec.js users.spec.js -R mocha-junit-reporter --reporter-options mochaFile=$TEST_RESULTS_DIR/testresults.xml
       fi
     - $MOD_LOC/istanbul --include-all-sources cover -root "$SHIPPABLE_REPO_DIR/routes" $SHIPPABLE_REPO_DIR/node_modules/mocha/bin/_mocha -- -R spec-xunit-file --recursive "$TESTS_LOC_DIR/**/*.spec.js"
