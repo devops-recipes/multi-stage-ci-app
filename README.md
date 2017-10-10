@@ -14,14 +14,3 @@ and istanbul.
 * All CI configuration is in `shippable.yml`
 * Follow these [CI Setup Instructions](http://docs.shippable.com/ci/runFirstBuild/) if you have never used Shippable CI Service
 * You should be able to run a manual build or webhook build on commit
-
-## CI Reports on Shippable
-
-### CI Console Output
-![CI Console Output](https://github.com/shippableSamples/node-with-tests-coverage/blob/master/public/resources/images/console.jpg)
-
-### CI Test Report
-![CI Test Report](https://github.com/shippableSamples/node-with-tests-coverage/blob/master/public/resources/images/tests.jpg)
-
-### CI Coverage Report
-![CI Coverage Report](https://github.com/shippableSamples/node-with-tests-coverage/blob/master/public/resources/images/coverage.jpg)
